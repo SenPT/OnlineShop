@@ -46,4 +46,3 @@ namespace OnlineShop.Model.Models
         public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
     }
 }
-}

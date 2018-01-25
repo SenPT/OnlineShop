@@ -8,27 +8,38 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Model.Models
 {
-    [Table("Slides")]
-    public class Slide
+    [Table("SupportOnlines")]
+    public class SupportOnline
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        public int ID { set; get; }
 
         [Required]
-        [MaxLength(256)]
-        public string Name { get; set; }
+        [MaxLength(50)]
+        public string Name { set; get; }
 
-        [MaxLength(256)]
-        public string Description { get; set; }
+        [MaxLength(50)]
+        public string Department { set; get; }
 
-        [MaxLength(256)]
-        public string Image { get; set; }
+        [MaxLength(50)]
+        public string Skype { set; get; }
 
-        [MaxLength(256)]
-        public string URL { get; set; }
+        [MaxLength(50)]
+        public string Mobile { set; get; }
 
-        public int? DisplayOrder { get; set; }
-        public bool Status { get; set; }
+        [MaxLength(50)]
+        public string Email { set; get; }
+
+        [MaxLength(50)]
+        public string Yahoo { set; get; }
+
+        [MaxLength(50)]
+        public string Facebook { set; get; }
+
+        [MaxLength(50)]
+        public bool Status { set; get; }
+
+        public int? DisplayOrder { set; get; }
     }
 }
