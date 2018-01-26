@@ -56,7 +56,14 @@
     <Compile Include="Infrustructure\IUnitOfWork.cs" />
     <Compile Include="Infrustructure\RepositoryBase.cs" />
     <Compile Include="Infrustructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201801261359049_InitialDB.cs" />
+    <Compile Include="Migrations\201801261359049_InitialDB.Designer.cs">
+      <DependentUpon>201801261359049_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responsitories\ProductCategoryrepository.cs" />
+    <Compile Include="Responsitories\ProductRepository.cs" />
     <Compile Include="_OnlineShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +81,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Responsitories\" />
+    <EmbeddedResource Include="Migrations\201801261359049_InitialDB.resx">
+      <DependentUpon>201801261359049_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
