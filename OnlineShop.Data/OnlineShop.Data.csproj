@@ -49,7 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrustructure\DbFactory.cs" />
+    <Compile Include="Infrustructure\Disposable.cs" />
+    <Compile Include="Infrustructure\IDbFactory.cs" />
+    <Compile Include="Infrustructure\IRepository.cs" />
+    <Compile Include="Infrustructure\IUnitOfWork.cs" />
+    <Compile Include="Infrustructure\RepositoryBase.cs" />
+    <Compile Include="Infrustructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201801261359049_InitialDB.cs" />
+    <Compile Include="Migrations\201801261359049_InitialDB.Designer.cs">
+      <DependentUpon>201801261359049_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responsitories\ProductCategoryrepository.cs" />
+    <Compile Include="Responsitories\ProductRepository.cs" />
+    <Compile Include="_OnlineShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +75,15 @@
       <Project>{e5368e84-3f35-4e50-af0b-4f46a84757a7}</Project>
       <Name>OnlineShop.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineShop.Model\OnlineShop.Model.csproj">
+      <Project>{DA9061B9-CA58-4AA8-BB5D-C1DF7272F38E}</Project>
+      <Name>OnlineShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801261359049_InitialDB.resx">
+      <DependentUpon>201801261359049_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
