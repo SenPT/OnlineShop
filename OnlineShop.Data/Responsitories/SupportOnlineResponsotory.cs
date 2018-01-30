@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Responsitories
 {
-    public interface IProductRepository: IRepository<Product>
+    public interface ISupportOnlineRepository: IRepository<SupportOnline>
     {
-
     }
-    public class ProductRepository: RepositoryBase<Product>,IProductRepository
+    public class SupportOnlineResponsotory
     {
-        public ProductRepository(IDbFactory dbFactory):base(dbFactory)
+        public SupportOnlineResponsotory(IDbFactory dbFactory):base(dbFactory)
         {
+
         }
     }
 }

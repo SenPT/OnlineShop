@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Responsitories
 {
-    public interface IProductRepository: IRepository<Product>
+    public interface IVisitorStaticRepository: IRepository<VisistorStatic>
     {
 
     }
-    public class ProductRepository: RepositoryBase<Product>,IProductRepository
+    public class VisistorStaticResponsitory: RepositoryBase<VisistorStatic>, IVisitorStaticRepository
     {
-        public ProductRepository(IDbFactory dbFactory):base(dbFactory)
+        public VisistorStaticResponsitory(IDbFactory dbFactory): base(dbFactory)
         {
         }
     }

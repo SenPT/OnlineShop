@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Responsitories
 {
-    public interface IProductRepository: IRepository<Product>
+    public interface IMenuGroupRepository: IRepository<MenuGroup>
     {
 
     }
-    public class ProductRepository: RepositoryBase<Product>,IProductRepository
+    public class MenuGroupResponsitory: RepositoryBase<MenuGroup>, IMenuGroupRepository
     {
-        public ProductRepository(IDbFactory dbFactory):base(dbFactory)
+        public MenuGroupResponsitory(IDbFactory dbFactory):base(dbFactory)
         {
+            
         }
     }
 }

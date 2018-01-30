@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Responsitories
 {
-    public interface IProductRepository: IRepository<Product>
+    public interface ITagRepository : IRepository<Tag>
     {
-
     }
-    public class ProductRepository: RepositoryBase<Product>,IProductRepository
+    public class TagRespository : RepositoryBase<Tag>, ITagRepository
     {
-        public ProductRepository(IDbFactory dbFactory):base(dbFactory)
+        public TagRespository(IDbFactory dbFactory):base(dbFactory)
         {
+
         }
     }
 }

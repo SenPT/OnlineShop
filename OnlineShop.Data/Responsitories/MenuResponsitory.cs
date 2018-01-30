@@ -1,5 +1,4 @@
 ﻿using OnlineShop.Data.Infrustructure;
-using OnlineShop.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Responsitories
 {
-    public interface IProductRepository: IRepository<Product>
+    public interface IMenuRepository:IRepository<Menu>
     {
 
     }
-    public class ProductRepository: RepositoryBase<Product>,IProductRepository
+    public class MenuResponsitory: RepositoryBase<Menu>,IMenuRepository
     {
-        public ProductRepository(IDbFactory dbFactory):base(dbFactory)
+        public MenuResponsitory(IDbFactory dbFactory):base(dbFactory)
         {
         }
     }
