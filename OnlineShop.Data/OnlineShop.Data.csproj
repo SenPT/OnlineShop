@@ -77,7 +77,8 @@
     <Compile Include="Responsitories\SlideResponsitory.cs" />
     <Compile Include="Responsitories\SupportOnlineResponsotory.cs" />
     <Compile Include="Responsitories\SystemConfigResponsitory.cs" />
-    <Compile Include="Responsitories\TagResponsitory.cs" />
+    <Compile Include="Responsitories\TagRespository.cs" />
+    <Compile Include="Responsitories\VisistorStatic.cs" />
     <Compile Include="Responsitories\VisistorStaticResponsitory.cs" />
     <Compile Include="_OnlineShopDbContext.cs" />
   </ItemGroup>
