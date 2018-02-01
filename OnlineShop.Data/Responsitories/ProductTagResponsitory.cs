@@ -11,7 +11,7 @@ namespace OnlineShop.Data.Responsitories
     public interface IProductTagRepository: IRepository<ProductTag>
     {
     }
-    public class ProductTagResponsitory: RepositoryBase<ProductTag>, IProductTag
+    public class ProductTagResponsitory: RepositoryBase<ProductTag>, IProductTagRepository
     {
         public ProductTagResponsitory(IDbFactory dbFactory):base(dbFactory)
         {

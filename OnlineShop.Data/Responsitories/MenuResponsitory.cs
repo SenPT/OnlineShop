@@ -1,4 +1,5 @@
 ﻿using OnlineShop.Data.Infrustructure;
+using OnlineShop.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -11,9 +11,9 @@ namespace OnlineShop.Data.Responsitories
     public interface ISupportOnlineRepository: IRepository<SupportOnline>
     {
     }
-    public class SupportOnlineResponsotory
+    public class SupportOnlineResponsotory:RepositoryBase<SupportOnline>,ISupportOnlineRepository
     {
-        public SupportOnlineResponsotory(IDbFactory dbFactory):base(dbFactory)
+        public SupportOnlineResponsotory(IDbFactory dbFactory): base(dbFactory)
         {
 
         }

@@ -11,7 +11,7 @@ namespace OnlineShop.Data.Responsitories
     public interface IPostCategoryRepository: IRepository<PostCategory>
     {
     }
-    public class PostCategoryResponsitory: RepositoryBase<Postcategory>, IPostCategoryRepository
+    public class PostCategoryResponsitory: RepositoryBase<PostCategory>, IPostCategoryRepository
     {
         public PostCategoryResponsitory(IDbFactory dbFactory):base(dbFactory)
         {
