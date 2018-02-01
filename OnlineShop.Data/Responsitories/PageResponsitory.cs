@@ -13,7 +13,7 @@ namespace OnlineShop.Data.Responsitories
     }
     public class PageResponsitory: RepositoryBase<Page>, IPageRepository
     {
-        public PageResponsitory(IDbFactory): base(dbFactory)
+        public PageResponsitory(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

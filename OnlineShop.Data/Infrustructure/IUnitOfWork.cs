@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Infrustructure
 {
-    interface IUnitOfWork
+   public interface IUnitOfWork
     {
+        void Commit();
     }
 }
