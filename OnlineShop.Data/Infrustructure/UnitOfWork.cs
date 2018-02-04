@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data.Infrustructure
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbFactory dbFactory;
         private _OnlineShopDbContext dbContext;
