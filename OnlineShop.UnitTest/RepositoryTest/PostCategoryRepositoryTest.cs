@@ -21,7 +21,7 @@ namespace OnlineShop.UnitTest.RepositoryTest
         public void Initialize()
         {
             dbFactory = new DbFactory();
-            objRepository = new PostCategoryResponsitory(dbFactory);
+            objRepository = new PostCategoryRepository(dbFactory);
             unitOfWork = new UnitOfWork(dbFactory);
         }
         [TestMethod]
