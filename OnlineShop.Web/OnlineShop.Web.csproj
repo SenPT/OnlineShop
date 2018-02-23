@@ -226,6 +226,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,6 +246,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\plugin\angular\angular-csp.css" />
+    <Content Include="Scripts\plugin\angular\angular.js" />
+    <Content Include="Scripts\plugin\angular\angular.min.js" />
+    <Content Include="Scripts\plugin\angular\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -258,7 +263,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Assets\Admin\" />
     <Folder Include="Assets\Client\" />
-    <Folder Include="Scripts\plugin\" />
     <Folder Include="Scripts\spa\" />
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +288,22 @@
       <Project>{df560838-5e88-439e-8c55-f94ec7eda007}</Project>
       <Name>OnlineShop.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\plugin\angular\.bower.json" />
+    <Content Include="Scripts\plugin\angular\angular.min.js.gzip" />
+    <Content Include="Scripts\plugin\angular\angular.min.js.map" />
+    <Content Include="Scripts\plugin\angular\bower.json" />
+    <Content Include="Scripts\plugin\angular\LICENSE.md" />
+    <Content Include="Scripts\plugin\angular\package.json" />
+    <Content Include="Scripts\plugin\angular\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
