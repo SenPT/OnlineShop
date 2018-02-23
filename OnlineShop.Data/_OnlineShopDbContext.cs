@@ -1,4 +1,5 @@
-﻿using OnlineShop.Model.Models;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using OnlineShop.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Data
 {
-   public class _OnlineShopDbContext: DbContext
+   public class _OnlineShopDbContext: IdentityDbContext<ApplicationUser>
     {
         public _OnlineShopDbContext() : base("OnlineShopConnection")
         {
@@ -37,10 +38,15 @@ namespace OnlineShop.Data
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         public DbSet<Error> Errors { set; get; }
 
+        public static _OnlineShopDbContext Create()
+        {
+            return new _OnlineShopDbContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {
-
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId , i.RoleId});
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
     }
 }
