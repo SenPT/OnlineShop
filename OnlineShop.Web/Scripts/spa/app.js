@@ -1,17 +1,28 @@
 ﻿/// <reference path="../plugin/angular/angular.js" />
 
-var myApp = angular.module('myModule', [])
+var myApp = angular.module('myModule', []);
 
 myApp.controller("schoolController", schoolController);
-myApp.controller("studentController", studentController);
-myApp.controller("teacherController", teacherController);
-function schoolController($scope) {
-    $scope.message = "Announcement from school.";
+myApp.service('Validator', Validator);
+
+schoolController.$inject = ['$scope', 'Validator'];
+
+function schoolController($scope, Validator) {
+    $scope.checkNumber = function () {
+        $scope.message = Validator.checkNumber($scope.num);
+    }
+    $scope.num = 1;
 }
-//declare
-function studentController($scope) {
-    //$scope.message="This is my message from controller"
-}
-function teacherController($scope) {
-    //$scope.message = "This is my message from controller"
+
+function Validator($window) {
+    return {
+        checkNumber: checkNumber
+    }
+    function checkNumber(input) {
+        if (input % 2 == 0) {
+            return ('This is even');
+        }
+        else
+            return ('This is odd');
+    }
 }
